@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W83-Oi-NBo">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Minions-->
+        <scene sceneID="LyS-C4-3af">
+            <objects>
+                <tableViewController id="W83-Oi-NBo" customClass="EmployeeListTableViewController" customModule="myLecture2_4App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RpF-aK-khd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="b8p-CV-ME2">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="124"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New employee name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vLu-pU-nhz">
+                                    <rect key="frame" x="24" y="12" width="204" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGJ-05-boK">
+                                    <rect key="frame" x="252" y="14" width="114" height="30"/>
+                                    <state key="normal" title="  Add Employee  "/>
+                                    <connections>
+                                        <action selector="addEmployeeButtonTapped:" destination="W83-Oi-NBo" eventType="touchUpInside" id="Xn3-up-4er"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muF-In-8Zx">
+                                    <rect key="frame" x="12" y="58" width="366" height="54"/>
+                                    <string key="text">Add your minions.
+Put them to work getting coffee, a sandwich, or...
+umm yeah about those TPS reports...</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="vLu-pU-nhz" firstAttribute="top" secondItem="b8p-CV-ME2" secondAttribute="top" constant="12" id="Dzq-7W-Pvs"/>
+                                <constraint firstItem="WGJ-05-boK" firstAttribute="centerY" secondItem="vLu-pU-nhz" secondAttribute="centerY" id="Iyg-6o-dCb"/>
+                                <constraint firstItem="WGJ-05-boK" firstAttribute="leading" secondItem="vLu-pU-nhz" secondAttribute="trailing" constant="24" id="JXm-M1-Cbh"/>
+                                <constraint firstAttribute="bottom" secondItem="muF-In-8Zx" secondAttribute="bottom" constant="12" id="OjJ-n4-RHx"/>
+                                <constraint firstItem="muF-In-8Zx" firstAttribute="top" secondItem="vLu-pU-nhz" secondAttribute="bottom" constant="12" id="Rr6-By-UUE"/>
+                                <constraint firstAttribute="trailing" secondItem="muF-In-8Zx" secondAttribute="trailing" constant="12" id="Vcd-6p-UQK"/>
+                                <constraint firstAttribute="trailing" secondItem="WGJ-05-boK" secondAttribute="trailing" constant="24" id="gU8-0K-ee6"/>
+                                <constraint firstItem="muF-In-8Zx" firstAttribute="leading" secondItem="b8p-CV-ME2" secondAttribute="leading" constant="12" id="mJT-PA-q4O"/>
+                                <constraint firstItem="vLu-pU-nhz" firstAttribute="leading" secondItem="b8p-CV-ME2" secondAttribute="leading" constant="24" id="tIx-UH-zGn"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="employeeCell" rowHeight="50" id="Z5g-UM-von" customClass="EmployeeTableViewCell" customModule="myLecture2_4App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="152" width="390" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z5g-UM-von" id="hSJ-RX-Hb7">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k58-hn-aok">
+                                            <rect key="frame" x="9.6666666666666572" y="2.6666666666666679" width="370.66666666666674" height="45"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fTE-gc-4E2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="226.66666666666666" height="45"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Label)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaz-zb-iOG">
+                                                            <rect key="frame" x="0.0" y="0.0" width="108.33333333333333" height="45"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(isAvailable?)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8h-8f-uR8">
+                                                            <rect key="frame" x="118.33333333333334" y="0.0" width="108.33333333333334" height="45"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0AZ-ei-9Vy">
+                                                    <rect key="frame" x="226.66666666666669" y="0.0" width="144" height="45"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naN-0M-FUy">
+                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="naN-0M-FUy" secondAttribute="height" multiplier="1:1" id="bEB-EP-kJr"/>
+                                                                <constraint firstAttribute="width" constant="50" id="lfk-Me-AaT"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                            <state key="normal" backgroundImage="coffee"/>
+                                                            <connections>
+                                                                <action selector="coffeeButtonTapped:" destination="Z5g-UM-von" eventType="touchUpInside" id="x3V-WW-ER7"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DG-nc-Z8R">
+                                                            <rect key="frame" x="46.999999999999972" y="0.0" width="45" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="1DG-nc-Z8R" secondAttribute="height" multiplier="1:1" id="96c-Z9-58L"/>
+                                                                <constraint firstAttribute="width" constant="50" id="yO7-jD-Exq"/>
+                                                            </constraints>
+                                                            <state key="normal" title=" " backgroundImage="sandwich"/>
+                                                            <connections>
+                                                                <action selector="sandwichButtonTapped:" destination="Z5g-UM-von" eventType="touchUpInside" id="e1h-dI-Hve"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73v-3I-ZLd">
+                                                            <rect key="frame" x="93.999999999999972" y="0.0" width="50" height="45"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="6Zm-CS-4Z0"/>
+                                                                <constraint firstAttribute="width" secondItem="73v-3I-ZLd" secondAttribute="height" multiplier="1:1" id="xzg-rs-4Kk"/>
+                                                            </constraints>
+                                                            <state key="normal" title=" " backgroundImage="reports"/>
+                                                            <connections>
+                                                                <action selector="reportsButtonTapped:" destination="Z5g-UM-von" eventType="touchUpInside" id="9Jj-vf-yVQ"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="naN-0M-FUy" firstAttribute="width" secondItem="naN-0M-FUy" secondAttribute="height" multiplier="1:1" id="I2d-j6-PjB"/>
+                                                        <constraint firstItem="1DG-nc-Z8R" firstAttribute="width" secondItem="1DG-nc-Z8R" secondAttribute="height" multiplier="1:1" id="cru-t1-jut"/>
+                                                        <constraint firstItem="naN-0M-FUy" firstAttribute="width" secondItem="naN-0M-FUy" secondAttribute="height" multiplier="1:1" id="dyn-Bo-sow"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="k58-hn-aok" firstAttribute="centerX" secondItem="hSJ-RX-Hb7" secondAttribute="centerX" id="EVv-NS-cHF"/>
+                                        <constraint firstItem="k58-hn-aok" firstAttribute="width" secondItem="hSJ-RX-Hb7" secondAttribute="width" multiplier="0.95" id="h6M-2X-vdR"/>
+                                        <constraint firstItem="k58-hn-aok" firstAttribute="height" secondItem="hSJ-RX-Hb7" secondAttribute="height" multiplier="0.9" id="hBI-QQ-M7m"/>
+                                        <constraint firstItem="k58-hn-aok" firstAttribute="centerY" secondItem="hSJ-RX-Hb7" secondAttribute="centerY" id="jQ8-Sr-eYu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coffeeButton" destination="naN-0M-FUy" id="srs-lS-7id"/>
+                                    <outlet property="employeeIsAvailableLabel" destination="j8h-8f-uR8" id="mtQ-rq-zdu"/>
+                                    <outlet property="employeeNameLabel" destination="uaz-zb-iOG" id="QNx-tr-FDi"/>
+                                    <outlet property="reportsButton" destination="73v-3I-ZLd" id="7Lg-j6-XQS"/>
+                                    <outlet property="sandwichButton" destination="1DG-nc-Z8R" id="yV0-S6-jta"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="W83-Oi-NBo" id="wHA-z9-hzp"/>
+                            <outlet property="delegate" destination="W83-Oi-NBo" id="7Jk-1E-A70"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Minions" id="yeJ-Fn-1w6"/>
+                    <connections>
+                        <outlet property="newEmployeeTextField" destination="vLu-pU-nhz" id="Tyy-6K-XU9"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zY9-NE-fWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="269.56521739130437" y="-5.3571428571428568"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coffee" width="300" height="300"/>
+        <image name="reports" width="225" height="225"/>
+        <image name="sandwich" width="840" height="780"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
